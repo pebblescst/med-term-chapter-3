@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 3 — Musculoskeletal System | Medical Terminology Study Guide</title>
+<style>
+:root{
+  --bg-primary:#ffffff;--bg-secondary:#f5fcf8;--bg-success:#e6f4ea;
+  --bg-warning:#fff8e1;--bg-danger:#fce8e8;--bg-info:#e8f0fc;--bg-muted:#f7f7f7;
+  --text-primary:#111111;--text-secondary:#555555;--text-muted:#888888;
+  --text-success:#1b5e20;--text-warning:#854F0B;--text-danger:#9c2020;--text-info:#1a5c9c;
+  --border:rgba(0,0,0,0.18);--border-light:rgba(0,0,0,0.09);
+  --green:#1A7A52;--greenLt:#D4EFE1;--navy:#12203A;--gray:#4A5568;
+  --r:8px;--rl:12px;
+}
+@media(prefers-color-scheme:dark){
+  :root{
+    --bg-primary:#1e1e1e;--bg-secondary:#252a22;--bg-success:#0d2a1a;
+    --bg-warning:#2a1f00;--bg-danger:#2a0d0d;--bg-info:#0d2a45;--bg-muted:#2a2a2a;
+    --text-primary:#eeeeee;--text-secondary:#aaaaaa;--text-muted:#666666;
+    --text-success:#81c784;--text-warning:#ffcc66;--text-danger:#e57373;--text-info:#7ab3e8;
+    --border:rgba(255,255,255,0.15);--border-light:rgba(255,255,255,0.08);
+    --greenLt:#0d2a1a;--navy:#1a2f4a;--gray:#94A3B8;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg-secondary);color:var(--text-primary);line-height:1.6;padding:0 0 3rem}
+.page-header{background:var(--bg-primary);border-bottom:0.5px solid var(--border);padding:1.25rem 2rem;margin-bottom:1.5rem}
+.page-header h1{font-size:22px;font-weight:500}.page-header p{font-size:14px;color:var(--text-secondary);margin-top:3px}
+.container{max-width:900px;margin:0 auto;padding:0 1.25rem}
+.sg{padding:.5rem 0 2rem}
+.tab-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:1.25rem}
+.tab-btn{padding:6px 13px;border-radius:var(--r);border:0.5px solid var(--border);background:var(--bg-primary);color:var(--text-secondary);font-size:13px;cursor:pointer;transition:all .15s}
+.tab-btn.active{background:var(--bg-success);color:var(--text-success);border-color:#1A7A52}
+.tab-btn:hover:not(.active){background:var(--bg-muted)}
+.sec{display:none}.sec.active{display:block}
+.sec-hdr{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--text-secondary);margin:1.4rem 0 .65rem;padding-bottom:4px;border-bottom:0.5px solid var(--border-light)}
+.pg{font-size:14px;color:var(--text-secondary);line-height:1.7;margin-bottom:1rem;background:var(--bg-muted);padding:.75rem 1rem;border-radius:var(--r)}
+.stat-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1.25rem}
+.stat-chip{padding:5px 12px;border-radius:var(--r);border:0.5px solid var(--border-light);font-size:12px;background:var(--bg-primary)}
+.stat-chip strong{font-weight:600}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+.ccard{background:var(--bg-primary);border:0.5px solid var(--border-light);border-radius:var(--rl);padding:.9rem 1.1rem}
+.ccard .ctitle{font-size:14px;font-weight:600;color:var(--text-primary);margin-bottom:5px}
+.ccard .cwt{font-size:11px;font-weight:600;padding:2px 7px;border-radius:var(--r);display:inline-block;margin-bottom:6px}
+.ccard .cdef{font-size:12px;color:var(--text-secondary);line-height:1.55}
+.dtable{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:.5rem;table-layout:fixed;background:var(--bg-primary);border-radius:var(--rl);overflow:hidden}
+.dtable th{text-align:left;padding:8px 12px;background:var(--bg-muted);border-bottom:0.5px solid var(--border);color:var(--text-secondary);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.dtable td{padding:8px 12px;border-bottom:0.5px solid var(--border-light);vertical-align:top;color:var(--text-secondary)}
+.dtable tr:last-child td{border-bottom:none}
+.dtable tr:hover td{background:var(--bg-secondary)}
+.dtable .wp{font-weight:600;font-style:italic;color:var(--text-primary);font-size:14px}
+.dtable .mean{font-weight:600;color:var(--text-primary)}
+.action-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
+.action-pair{background:var(--bg-primary);border:0.5px solid var(--border-light);border-radius:var(--rl);overflow:hidden}
+.action-hdr{font-size:11px;font-weight:600;padding:4px 10px;color:var(--text-secondary)}
+.action-row{display:flex}
+.action-side{flex:1;padding:.65rem .9rem}
+.action-side:first-child{border-right:0.5px solid var(--border-light)}
+.action-term{font-size:13px;font-weight:600;color:var(--text-primary)}
+.action-def{font-size:11px;color:var(--text-secondary);margin-top:3px;line-height:1.4}
+.cl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin-bottom:.75rem}
+.cl-card{background:var(--bg-primary);border:0.5px solid var(--border-light);border-radius:var(--rl);padding:.75rem 1rem}
+.cl-term{font-size:13px;font-weight:600;color:var(--text-primary);margin-bottom:3px}
+.cl-break{font-size:10px;color:var(--text-success);margin-bottom:3px;font-style:italic}
+.cl-def{font-size:11px;color:var(--text-secondary);line-height:1.5}
+.fc-controls{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;flex-wrap:wrap}
+.fc-sel{padding:6px 10px;border-radius:var(--r);border:1px solid var(--border);background:var(--bg-primary);color:var(--text-primary);font-size:14px}
+.flashcard{background:var(--bg-primary);border:1px solid var(--border);border-radius:var(--rl);padding:1.75rem;min-height:175px;display:flex;flex-direction:column;justify-content:center;align-items:center;cursor:pointer;position:relative}
+.flashcard:hover{border-color:#1A7A52}
+.fc-badge{position:absolute;top:11px;left:13px;font-size:11px;padding:2px 7px;border-radius:var(--r);font-weight:600}
+.fc-front{font-size:21px;font-weight:500;text-align:center;color:var(--text-primary)}
+.fc-back{display:none;text-align:center}
+.fc-back .meaning{font-size:16px;font-weight:500;color:var(--text-primary);margin-bottom:5px}
+.fc-back .example{font-size:12px;color:var(--text-secondary)}
+.fc-hint{font-size:12px;color:var(--text-muted);margin-top:.75rem}
+.fc-prog{font-size:13px;color:var(--text-secondary);margin-left:auto}
+.fc-actions{display:flex;gap:8px;margin-top:.9rem;flex-wrap:wrap;justify-content:center}
+.btn{padding:7px 16px;border-radius:var(--r);border:1px solid var(--border);background:var(--bg-primary);color:var(--text-primary);font-size:14px;cursor:pointer;transition:all .15s}
+.btn:hover{background:var(--bg-muted)}
+.btn-ok{border-color:#1A7A52;color:var(--text-success)}.btn-ok:hover{background:var(--bg-success)}
+.btn-no{border-color:#c62828;color:var(--text-danger)}.btn-no:hover{background:var(--bg-danger)}
+.fc-score{font-size:13px;color:var(--text-secondary);margin-top:.75rem}
+.quiz-q{background:var(--bg-muted);border-radius:var(--rl);padding:1rem 1.15rem;margin-bottom:1rem;font-size:15px;font-weight:500;line-height:1.5}
+.quiz-opts{display:flex;flex-direction:column;gap:7px;margin-bottom:1rem}
+.qopt{padding:9px 13px;border-radius:var(--r);border:1px solid var(--border);background:var(--bg-primary);color:var(--text-primary);font-size:14px;cursor:pointer;text-align:left;transition:all .15s}
+.qopt:hover:not(:disabled){background:var(--bg-muted)}
+.qopt.correct{background:var(--bg-success);border-color:#1A7A52;color:var(--text-success)}
+.qopt.wrong{background:var(--bg-danger);border-color:#c62828;color:var(--text-danger)}
+.qfb{font-size:13px;margin-bottom:.9rem;min-height:16px}
+.qctr{font-size:12px;color:var(--text-muted)}
+.score-wrap{background:var(--bg-muted);border-radius:var(--rl);padding:2rem;text-align:center}
+.score-num{font-size:40px;font-weight:500}
+.score-lbl{font-size:14px;color:var(--text-secondary);margin-top:4px}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <div style="max-width:900px;margin:0 auto">
+    <h1>Chapter 3 — Musculoskeletal System</h1>
+    <p>Medical Terminology Study Guide &nbsp;·&nbsp; 7 Prefixes &nbsp;·&nbsp; 13 Suffixes &nbsp;·&nbsp; 17+ Combining Forms &nbsp;·&nbsp; 80+ Clinical Terms &nbsp;·&nbsp; 7 Muscle Action Pairs</p>
+  </div>
+</div>
+<div class="container"><div class="sg">
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="showTab('overview',this)">Overview</button>
+  <button class="tab-btn" onclick="showTab('anatomy',this)">Anatomy</button>
+  <button class="tab-btn" onclick="showTab('wordparts',this)">Word Parts</button>
+  <button class="tab-btn" onclick="showTab('combining',this)">Combining Forms</button>
+  <button class="tab-btn" onclick="showTab('clinical',this)">Clinical Terms</button>
+  <button class="tab-btn" onclick="showTab('procedures',this)">Procedures</button>
+  <button class="tab-btn" onclick="showTab('flashcards',this)">Flashcards</button>
+  <button class="tab-btn" onclick="showTab('quiz',this)">Quiz</button>
+</div>
+
+<!-- OVERVIEW -->
+<div class="sec active" id="tab-overview">
+  <div class="stat-row">
+    <span class="stat-chip"><strong>7</strong> prefixes</span>
+    <span class="stat-chip"><strong>13</strong> suffixes</span>
+    <span class="stat-chip"><strong>17</strong> core combining forms</span>
+    <span class="stat-chip"><strong>80+</strong> clinical terms</span>
+    <span class="stat-chip"><strong>7</strong> muscle action pairs</span>
+    <span class="stat-chip"><strong>5</strong> system functions</span>
+  </div>
+  <div class="pg">Chapter 3 covers the <strong>musculoskeletal system</strong> — the most content-heavy chapter so far. Specialties: <em>Orthopedics</em> (orthopedist/orthopod), <em>Rheumatology</em> (rheumatologist), <em>Physiatry</em> (physiatrist — rehabilitation medicine).</div>
+
+  <div class="sec-hdr">5 System functions</div>
+  <div class="card-grid">
+    <div class="ccard"><span class="cwt" style="background:var(--bg-success);color:var(--text-success)">Support</span><div class="ctitle">Structural framework</div><div class="cdef">The skeleton provides the rigid framework maintaining body shape and supporting weight.</div></div>
+    <div class="ccard"><span class="cwt" style="background:var(--bg-danger);color:var(--text-danger)">Protection</span><div class="ctitle">Organ protection</div><div class="cdef">Skull → brain; vertebrae → spinal cord; ribs → heart/lungs/trachea/esophagus; pelvis → bladder/uterus.</div></div>
+    <div class="ccard"><span class="cwt" style="background:var(--bg-info);color:var(--text-info)">Movement</span><div class="ctitle">Locomotion</div><div class="cdef">Muscles attach via tendons to bones. Contraction pulls bones to produce movement at joints. Antagonistic pairs: flexor contracts while extensor relaxes.</div></div>
+    <div class="ccard"><span class="cwt" style="background:var(--bg-warning);color:var(--text-warning)">Storage</span><div class="ctitle">Mineral bank</div><div class="cdef">Bones store calcium (Ca) and phosphorus (P). The body makes deposits and withdrawals as needed for metabolism, nerve function, and muscle contraction.</div></div>
+    <div class="ccard"><span class="cwt" style="background:var(--bg-danger);color:var(--text-danger)">Hematopoiesis</span><div class="ctitle">Blood cell formation</div><div class="cdef">hemat/o + -poiesis = blood formation. Red bone marrow (myel/o) produces RBCs, WBCs, and platelets. Primarily in flat bones and proximal long bones in adults.</div></div>
+  </div>
+
+  <div class="sec-hdr">System components</div>
+  <div class="card-grid">
+    <div class="ccard"><span class="cwt" style="background:var(--bg-success);color:var(--text-success)">Bones — oste/o</span><div class="ctitle">206 bones</div><div class="cdef">Two divisions: axial skeleton (80 bones: skull + vertebrae + rib cage) and appendicular skeleton (126 bones: limbs + girdles). Shapes: long, short, flat, irregular, sesamoid.</div></div>
+    <div class="ccard"><span class="cwt" style="background:var(--bg-info);color:var(--text-info)">Muscles — my/o</span><div class="ctitle">Three types</div><div class="cdef">Skeletal (voluntary, bone-attached), smooth (involuntary, GI/vascular), cardiac (involuntary, heart). Named by location, size, shape, action, or origin/insertion.</div></div>
+    <div class="ccard"><span class="cwt" style="background:var(--bg-warning);color:var(--text-warning)">Joints — arthr/o</span><div class="ctitle">3 types by mobility</div><div class="cdef">Synarthroses (immovable — skull sutures), amphiarthroses (slightly movable — intervertebral discs), diarthroses/synovial (freely movable — hip, knee, shoulder).</div></div>
+    <div class="ccard"><span class="cwt" style="background:var(--bg-muted);color:var(--text-secondary)">Connective</span><div class="ctitle">Ligaments · Tendons · Fascia · Cartilage</div><div class="cdef">Ligament (syndesm/o): bone-to-bone. Tendon (tendin/o): muscle-to-bone. Fascia (fasci/o): wraps muscles. Cartilage (chondr/o): cushions joints, flexible support. Sprain = ligament injury; Strain = tendon/muscle injury.</div></div>
+  </div>
+
+  <div class="sec-hdr">Key A&P terms</div>
+  <table class="dtable"><colgroup><col style="width:20%"><col style="width:80%"></colgroup>
+    <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+    <tbody>
+      <tr><td class="mean">Appendicular skeleton</td><td>Free appendages and their attachments — upper/lower extremities and shoulder/pelvic girdles. 126 bones. Everything that "appends" to the axial skeleton.</td></tr>
+      <tr><td class="mean">Articulation</td><td>A joint (arthr/o) — where two bones meet. Range of motion (ROM) = range through which a joint can be moved. Measured in degrees with a goniometer.</td></tr>
+      <tr><td class="mean">Axial skeleton</td><td>Bones forming the vertical axis: skull + vertebral column + rib cage. 80 bones. Central support structure protecting brain, spinal cord, and thoracic organs.</td></tr>
+      <tr><td class="mean">Bone depression</td><td>Hollow or concave area: foramen (hole/opening), fossa (pit/depression), sinus (air-filled cavity/channel).</td></tr>
+      <tr><td class="mean">Bone process</td><td>Projection on bone surface: condyle (rounded knuckle), epicondyle (above condyle), crest (ridge), head (rounded end), spine (sharp projection), trochanter, tubercle, tuberosity.</td></tr>
+      <tr><td class="mean">Bursa</td><td>Fluid-filled sac (burs/o) near a joint reducing friction between bone, tendons, and muscles. Plural: bursae. Bursitis = inflammation.</td></tr>
+      <tr><td class="mean">Cartilage</td><td>Firm, flexible connective tissue (chondr/o). Covers joint surfaces, forms structural support (ear, nose, rib tips). Not vascularized — heals slowly.</td></tr>
+      <tr><td class="mean">Fascia</td><td>Connective tissue sheet (fasci/o) wrapping, separating, and supporting muscles/organs. Compartment syndrome = fascial compartment pressure buildup → emergency. Plantar fascia = thick band under foot.</td></tr>
+      <tr><td class="mean">Ligament</td><td>Dense connective tissue (syndesm/o) connecting bone to bone. Stabilizes joints. Sprain = ligament injury (grade I-III). Common: ACL, MCL (knee); ATFL (ankle).</td></tr>
+      <tr><td class="mean">Muscle</td><td>Contractile tissue (my/o). Three types: skeletal (voluntary), smooth (involuntary — GI, vascular), cardiac (involuntary — heart). Muscular dystrophy = progressive skeletal muscle disease.</td></tr>
+      <tr><td class="mean">Tendon</td><td>Dense connective tissue cord (tendin/o) connecting muscle to bone. Strain = tendon or muscle injury. Tendinitis = inflammation. Tendons transmit muscle force to bones to produce movement.</td></tr>
+      <tr><td class="mean">Vertebra</td><td>Individual bone of the spinal column (vertebr/o, spondyl/o). Plural: vertebrae. 26 total. Structure: spinous process (spin/o), lamina (lamin/o), vertebral body, transverse process.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ANATOMY -->
+<div class="sec" id="tab-anatomy">
+  <div class="pg">Bone structure, skeleton organization, joints, and all 7 muscle action pairs.</div>
+
+  <div class="sec-hdr">Bone structure</div>
+  <div class="card-grid">
+    <div class="ccard"><span class="cwt" style="background:var(--bg-success);color:var(--text-success)">Bone cells</span><div class="ctitle">Osteoblasts · Osteocytes · Osteoclasts</div><div class="cdef"><strong>Osteoblasts:</strong> build bone (blast = builder). Active during growth and fracture repair. <strong>Osteocytes:</strong> mature bone cells in matrix. <strong>Osteoclasts:</strong> break down/resorb bone (clast = breaker). Balance between builders and breakers maintains bone density. ⚠ Osteoclast (cell) ≠ osteoclasis (procedure).</div></div>
+    <div class="ccard"><span class="cwt" style="background:var(--bg-info);color:var(--text-info)">Bone types</span><div class="ctitle">Compact vs Cancellous</div><div class="cdef"><strong>Compact (cortical):</strong> dense outer layer; strong and solid. <strong>Cancellous (spongy/trabecular):</strong> honeycomb inner structure; lightweight; contains red bone marrow (myel/o) for hematopoiesis. Matrix = calcified non-cellular calcium phosphate framework.</div></div>
+    <div class="ccard"><span class="cwt" style="background:var(--bg-warning);color:var(--text-warning)">Long bone parts</span><div class="ctitle">Diaphysis · Epiphysis · Metaphysis</div><div class="cdef"><strong>Diaphysis (dia- + -physis):</strong> the shaft — main long part. <strong>Epiphysis (epi- + -physis):</strong> the rounded ends. <strong>Metaphysis:</strong> flared region between shaft and ends. <strong>Epiphyseal plate:</strong> growth plate — cartilage zone where bone lengthens in children. Closes end of puberty.</div></div>
+    <div class="ccard"><span class="cwt" style="background:var(--bg-danger);color:var(--text-danger)">Bone coverings</span><div class="ctitle">Periosteum · Endosteum</div><div class="cdef"><strong>Periosteum (peri- + oste/o):</strong> dense fibrous membrane covering OUTER bone surface. Contains blood vessels and osteoblasts for repair. <strong>Endosteum (endo- + oste/o):</strong> thin membrane lining the INNER medullary cavity.</div></div>
+  </div>
+
+  <div class="sec-hdr">Axial skeleton</div>
+  <div class="card-grid">
+    <div class="ccard"><span class="cwt" style="background:var(--bg-info);color:var(--text-info)">Skull</span><div class="ctitle">Cranium (8) + Facial (14)</div><div class="cdef">Cranial: frontal, 2 parietal, occipital, 2 temporal, ethmoid, sphenoid. Facial: 2 zygomatic, 2 lacrimal, 2 maxilla, mandible (only moveable skull bone — TMJ), vomer, 2 palatine, 2 inferior nasal conchae.</div></div>
+    <div class="ccard"><span class="cwt" style="background:var(--bg-warning);color:var(--text-warning)">Rib cage</span><div class="ctitle">12 pairs ribs + Sternum</div><div class="cdef">True ribs (1-7): direct costal cartilage to sternum. False ribs (8-10): attach to rib 7. Floating (11-12): no anterior attachment. Sternum = manubrium + body + xiphoid process.</div></div>
+    <div class="ccard"><span class="cwt" style="background:var(--bg-success);color:var(--text-success)">Vertebral column</span><div class="ctitle">26 vertebrae — 5 regions</div><div class="cdef">Cervical C1-C7 (C1=atlas, C2=axis), Thoracic T1-T12, Lumbar L1-L5 (largest), Sacrum (S1-S5 fused), Coccyx. Each vertebra: spinous process (spin/o), lamina (lamin/o), body, transverse process.</div></div>
+  </div>
+
+  <div class="sec-hdr">Appendicular skeleton</div>
+  <div class="card-grid">
+    <div class="ccard"><span class="cwt" style="background:var(--bg-info);color:var(--text-info)">Upper extremity</span><div class="ctitle">Shoulder → Fingers</div><div class="cdef">Shoulder girdle: scapula (scapul/o) + clavicle (clavicul/o, cleid/o). Arm: humerus (humer/o) → radius (radi/o) + ulna (uln/o). Wrist: 8 carpals (carp/o). Hand: 5 metacarpals + 14 phalanges (phalang/o).</div></div>
+    <div class="ccard"><span class="cwt" style="background:var(--bg-success);color:var(--text-success)">Lower extremity</span><div class="ctitle">Hip → Toes</div><div class="cdef">Pelvic girdle: ilium (ili/o) ⚠ ≠ ileum + ischium (ischi/o) + pubis (pub/o). Leg: femur (femor/o — longest bone) + patella (patell/o) + tibia (tibi/o) + fibula (fibul/o). Ankle: 7 tarsals. Foot: 5 metatarsals + 14 phalanges.</div></div>
+  </div>
+
+  <div class="sec-hdr">Muscle actions — 7 opposite pairs</div>
+  <div class="action-grid">
+    <div class="action-pair"><div class="action-hdr" style="background:var(--bg-info)">Angle at joint</div><div class="action-row"><div class="action-side"><div class="action-term">Flexion</div><div class="action-def">DECREASING angle at joint. Bending. Bicep curl. "FLEXing = curling = bending."</div></div><div class="action-side"><div class="action-term">Extension</div><div class="action-def">INCREASING angle at joint. Straightening. Hyperextension = beyond neutral.</div></div></div></div>
+    <div class="action-pair"><div class="action-hdr" style="background:var(--bg-success)">Midline movement</div><div class="action-row"><div class="action-side"><div class="action-term">Adduction</div><div class="action-def">TOWARD midline. ADD to body. Bringing arm back to side. "ADDuction = ADD to body."</div></div><div class="action-side"><div class="action-term">Abduction</div><div class="action-def">AWAY from midline. Raising arm to side. "ABduction = ABsent from body."</div></div></div></div>
+    <div class="action-pair"><div class="action-hdr" style="background:var(--bg-warning)">Forearm/foot rotation</div><div class="action-row"><div class="action-side"><div class="action-term">Supination</div><div class="action-def">Palm or foot UPWARD. "Supine = face UP." Like holding a soup bowl.</div></div><div class="action-side"><div class="action-term">Pronation</div><div class="action-def">Palm or foot DOWNWARD. "Prone = face DOWN."</div></div></div></div>
+    <div class="action-pair"><div class="action-hdr" style="background:var(--bg-danger)">Ankle/foot</div><div class="action-row"><div class="action-side"><div class="action-term">Dorsiflexion</div><div class="action-def">Foot UPWARD toward shin. Dorsum = top of foot. Pulling toes toward nose.</div></div><div class="action-side"><div class="action-term">Plantar flexion</div><div class="action-def">Toes DOWNWARD. plant/o = sole. Standing on tiptoe. Pointing foot.</div></div></div></div>
+    <div class="action-pair"><div class="action-hdr" style="background:var(--bg-muted)">Turning out/in</div><div class="action-row"><div class="action-side"><div class="action-term">Eversion</div><div class="action-def">Sole faces OUT (away from midline).</div></div><div class="action-side"><div class="action-term">Inversion</div><div class="action-def">Sole faces IN (toward midline). Ankle inversion = most common ankle sprain.</div></div></div></div>
+    <div class="action-pair"><div class="action-hdr" style="background:var(--bg-muted)">Circular movement</div><div class="action-row"><div class="action-side"><div class="action-term">Rotation</div><div class="action-def">Bone turns on its own axis. Turning head side to side.</div></div><div class="action-side"><div class="action-term">Circumduction</div><div class="action-def">Circular movement of distal limb around attachment. Combines all movements (cone shape).</div></div></div></div>
+    <div class="action-pair"><div class="action-hdr" style="background:var(--bg-info)">Forward/backward</div><div class="action-row"><div class="action-side"><div class="action-term">Protraction</div><div class="action-def">FORWARD movement (pro- = forward). Jaw or scapula forward.</div></div><div class="action-side"><div class="action-term">Retraction</div><div class="action-def">BACKWARD movement (re- = back). Jaw or scapula back. Squeezing shoulder blades.</div></div></div></div>
+  </div>
+</div>
+
+<!-- WORD PARTS -->
+<div class="sec" id="tab-wordparts">
+  <div class="pg">7 prefixes and 13 suffixes. Six suffixes (-centesis, -clasis, -desis, -listhesis, -physis, -trophy) are unique to or most strongly associated with the musculoskeletal system.</div>
+
+  <div class="sec-hdr">Prefixes (7)</div>
+  <table class="dtable"><colgroup><col style="width:12%"><col style="width:22%"><col></colgroup>
+    <thead><tr><th>Prefix</th><th>Meaning</th><th>Examples & notes</th></tr></thead>
+    <tbody>
+      <tr><td class="wp">dia-</td><td class="mean">through, complete, between</td><td>Diaphysis (dia- + -physis = growing through = the shaft of a long bone); diaphragm (partition through body). Also diarrhea (Ch.5).</td></tr>
+      <tr><td class="wp">dys-</td><td class="mean">painful, difficult, abnormal</td><td>Dystrophy (dys- + -trophy = abnormal development); muscular dystrophy. Universal prefix across all chapters.</td></tr>
+      <tr><td class="wp">endo-, end-</td><td class="mean">within, inner</td><td>Endosteum (membrane within bone cavity). end- before vowels. Also endoscopy, endocardium.</td></tr>
+      <tr><td class="wp">epi-</td><td class="mean">above, upon, on</td><td>Epiphysis (epi- + -physis = growing upon = the ends of long bones); epicondyle (above the condyle). Also epidermis, epigastric.</td></tr>
+      <tr><td class="wp">inter-</td><td class="mean">between</td><td>Intervertebral (between vertebrae = disc space); intercostal (inter- + cost/o + -al = between ribs); interosseous (between bones).</td></tr>
+      <tr><td class="wp">peri-</td><td class="mean">around, surrounding</td><td>Periosteum (peri- + oste/o + -um = around bone); perimysium (around muscle fascicle); perichondrium (around cartilage). Universal prefix.</td></tr>
+      <tr><td class="wp">syn-</td><td class="mean">joined, together, with</td><td>Syndactyly (syn- + dactyl/o = fused digits); syndesmosis (bones joined by ligament); synergistic muscles (work together); symphysis pubis (grown together).</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sec-hdr">Suffixes (13)</div>
+  <table class="dtable"><colgroup><col style="width:14%"><col style="width:24%"><col></colgroup>
+    <thead><tr><th>Suffix</th><th>Meaning</th><th>Examples & notes</th></tr></thead>
+    <tbody>
+      <tr><td class="wp">-al</td><td class="mean">pertaining to</td><td>Vertebral (vertebra); costal (ribs); intervertebral; plantar (sole of foot). Universal adjective suffix.</td></tr>
+      <tr><td class="wp">-centesis</td><td class="mean">surgical puncture to withdraw fluid</td><td>Arthrocentesis (joint aspiration — diagnose gout, RA, infection; inject corticosteroid). Also thoracentesis, paracentesis.</td></tr>
+      <tr><td class="wp">-clasis</td><td class="mean">intentional breaking</td><td>Osteoclasis (intentional bone breaking to correct deformity, then reset). ⚠ ≠ osteoclast (the bone-resorbing CELL).</td></tr>
+      <tr><td class="wp">-desis</td><td class="mean">surgical binding, fusion</td><td>Arthrodesis (joint fusion — permanently immobilizes); spondylosyndesis (spinal fusion). -desis = permanently bound.</td></tr>
+      <tr><td class="wp">-graphy</td><td class="mean">process of recording/imaging</td><td>Arthrography (joint imaging with contrast); electromyography (EMG = muscle electrical activity recording with needle electrodes).</td></tr>
+      <tr><td class="wp">-itis</td><td class="mean">inflammation</td><td>Arthritis, osteomyelitis, bursitis, tendinitis, costochondritis. Most common pathology suffix — universal.</td></tr>
+      <tr><td class="wp">-listhesis</td><td class="mean">slipping</td><td>Spondylolisthesis (vertebra slips forward). EXCLUSIVE to spinal terminology. Greek olisthos = to slip on.</td></tr>
+      <tr><td class="wp">-lysis</td><td class="mean">breakdown, destruction, loosening</td><td>Rhabdomyolysis (skeletal muscle breakdown → myoglobin → kidney injury); ankylolysis.</td></tr>
+      <tr><td class="wp">-malacia</td><td class="mean">softening</td><td>Osteomalacia (bone softening); chondromalacia (cartilage softening). ⚠ ≠ -megaly (enlargement).</td></tr>
+      <tr><td class="wp">-physis</td><td class="mean">growth, growing</td><td>Diaphysis (shaft), epiphysis (end), metaphysis, symphysis (grown together). Anatomical/structural suffix.</td></tr>
+      <tr><td class="wp">-plasty</td><td class="mean">surgical repair/reconstruction</td><td>Arthroplasty (joint replacement); osteoplasty; kyphoplasty (vertebral balloon cement repair).</td></tr>
+      <tr><td class="wp">-scopy</td><td class="mean">process of visual examination</td><td>Arthroscopy (visual exam of joint interior). Arthroscope = the instrument. Allows surgery through small incisions.</td></tr>
+      <tr><td class="wp">-trophy</td><td class="mean">nourishment, development</td><td>Dystrophy (abnormal development); atrophy (wasting — a- = without); hypertrophy (excessive development = muscle building).</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sec-hdr">⚠ Key look-alike pairs</div>
+  <div class="card-grid">
+    <div class="ccard"><div class="ctitle">-clasis vs -desis</div><div class="cdef">-clasis = intentional BREAKING (osteoclasis). -desis = surgical BINDING/FUSION (arthrodesis). One breaks it; the other fuses it permanently.</div></div>
+    <div class="ccard"><div class="ctitle">-trophy vs -physis</div><div class="cdef">-trophy = NOURISHMENT/DEVELOPMENT (dystrophy). -physis = GROWTH zone/structure (epiphysis, diaphysis). Both relate to growth but in different contexts.</div></div>
+    <div class="ccard"><div class="ctitle">-malacia vs -megaly</div><div class="cdef">-malacia = SOFTENING (osteomalacia, chondromalacia). -megaly = ENLARGEMENT (hepatomegaly, cardiomegaly). Both start with "m" — very different pathology.</div></div>
+    <div class="ccard"><div class="ctitle">The arthr/o procedure chain</div><div class="cdef">arthroCENTESIS (aspirate fluid) vs arthroDESIS (fuse joint) vs arthroPLASTY (replace joint) vs arthroSCOPY (look inside). Same root — completely different procedures based solely on the suffix.</div></div>
+  </div>
+</div>
+
+<!-- COMBINING FORMS -->
+<div class="sec" id="tab-combining">
+  <div class="pg">Chapter 3 introduces 17 core combining forms (PDF). Additional combining forms for specific bones are listed from the lecture slides.</div>
+
+  <div class="sec-hdr">Core combining forms — PDF list (17)</div>
+  <table class="dtable"><colgroup><col style="width:15%"><col style="width:22%"><col></colgroup>
+    <thead><tr><th>Combining form</th><th>Meaning</th><th>Examples & notes</th></tr></thead>
+    <tbody>
+      <tr><td class="wp">arthr/o</td><td class="mean">joint, articulation</td><td>Arthritis, arthroplasty, arthroscopy, arthrodesis, arthrocentesis — the busiest combining form in this chapter.</td></tr>
+      <tr><td class="wp">burs/o</td><td class="mean">bursa (fluid sac)</td><td>Bursitis (bursa inflammation), bursectomy. Located near joints to reduce tendon-bone friction.</td></tr>
+      <tr><td class="wp">chondr/o</td><td class="mean">cartilage</td><td>Chondromalacia, achondroplasia (dwarfism — a- + chondr/o + -plasia), costochondritis, chondrosarcoma.</td></tr>
+      <tr><td class="wp">cost/o</td><td class="mean">rib</td><td>Costal (pertaining to ribs), intercostal (between ribs), costochondritis (rib+cartilage inflammation).</td></tr>
+      <tr><td class="wp">dactyl/o</td><td class="mean">finger, toe, digit</td><td>Polydactyly (poly- = extra digits), syndactyly (syn- = fused digits), dactylitis (digit inflammation).</td></tr>
+      <tr><td class="wp">electr/o</td><td class="mean">electricity</td><td>Electromyography (EMG: electr/o + my/o + -graphy = recording muscle electrical activity). Also ECG, EEG.</td></tr>
+      <tr><td class="wp">fasci/o</td><td class="mean">fascia (connective tissue)</td><td>Plantar fasciitis (most common heel pain), fasciotomy (compartment syndrome emergency release), fasciectomy.</td></tr>
+      <tr><td class="wp">my/o</td><td class="mean">muscle</td><td>Myalgia (pain), myopathy (disease), myositis (inflammation), EMG, rhabdomyolysis. Primary muscle CF.</td></tr>
+      <tr><td class="wp">myel/o</td><td class="mean">⚠ DUAL: bone marrow OR spinal cord</td><td>Osteomyelitis (bone MARROW infection) vs myelogram (SPINAL CORD imaging). Context determines meaning — tested frequently.</td></tr>
+      <tr><td class="wp">oste/o</td><td class="mean">bone</td><td>Osteoporosis, osteomalacia, osteomyelitis, osteosarcoma, arthroplasty. Primary bone combining form.</td></tr>
+      <tr><td class="wp">plant/o</td><td class="mean">sole of the foot</td><td>Plantar fasciitis (sole-of-foot fascia inflammation), plantar flexion (pointing foot toward the sole).</td></tr>
+      <tr><td class="wp">prosthes/o</td><td class="mean">prosthesis, artificial addition</td><td>Prosthesis (artificial replacement — limb, joint, eye). Total hip/knee replacement uses a prosthesis.</td></tr>
+      <tr><td class="wp">rhabdomy/o</td><td class="mean">skeletal (striated) muscle</td><td>Rhabdomyolysis (skeletal muscle breakdown → myoglobin → kidney injury), rhabdomyosarcoma (malignant tumor).</td></tr>
+      <tr><td class="wp">spondyl/o</td><td class="mean">vertebra, spinal column</td><td>Spondylolisthesis, ankylosing spondylitis, spondylosyndesis. Primarily used in pathological terms. ⚠ vs vertebr/o.</td></tr>
+      <tr><td class="wp">syndesm/o</td><td class="mean">ligament</td><td>Syndesmosis, syndesmoplasty (ligament repair). syn- = together + desm/o = band/ligament.</td></tr>
+      <tr><td class="wp">tendin/o</td><td class="mean">tendon</td><td>Tendinitis, tendinopathy. Also: tend/o, ten/o. Tendon = muscle to bone; ligament (syndesm/o) = bone to bone.</td></tr>
+      <tr><td class="wp">vertebr/o</td><td class="mean">vertebra, spinal column</td><td>Vertebral, intervertebral (disc space), vertebroplasty. Primarily anatomical/directional terms. ⚠ vs spondyl/o.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sec-hdr">Additional combining forms — from lecture slides</div>
+  <table class="dtable"><colgroup><col style="width:15%"><col style="width:22%"><col></colgroup>
+    <thead><tr><th>Combining form</th><th>Meaning</th><th>Examples</th></tr></thead>
+    <tbody>
+      <tr><td class="wp">carp/o</td><td class="mean">wrist, carpus</td><td>Carpal tunnel syndrome (CTS); carpectomy; 8 carpal bones in the wrist.</td></tr>
+      <tr><td class="wp">cervic/o</td><td class="mean">neck, cervical vertebrae</td><td>Cervical (C1-C7); cervicodynia (neck pain); also used for cervix uteri.</td></tr>
+      <tr><td class="wp">clavicul/o, cleid/o</td><td class="mean">clavicle (collarbone)</td><td>Clavicular; sternocleidomastoid (SCM) muscle; clavicle fracture.</td></tr>
+      <tr><td class="wp">femor/o</td><td class="mean">femur (thigh bone)</td><td>Femoral (pertaining to femur); femoral neck fracture (common in osteoporosis = "broken hip").</td></tr>
+      <tr><td class="wp">humer/o</td><td class="mean">humerus (upper arm)</td><td>Humeral; spiral humerus fracture. Upper arm from shoulder to elbow.</td></tr>
+      <tr><td class="wp">ili/o</td><td class="mean">ilium (hip bone)</td><td>Iliac crest (landmark for IM injection, bone marrow biopsy). ⚠ ilium (hip bone) ≠ ileum (intestine).</td></tr>
+      <tr><td class="wp">lamin/o</td><td class="mean">lamina (vertebral arch)</td><td>Laminectomy (lamin/o + -ectomy = surgical removal of lamina to decompress spinal canal).</td></tr>
+      <tr><td class="wp">lumb/o</td><td class="mean">lumbar, lower back</td><td>Lumbar (L1-L5); lumbar puncture (spinal tap); lumbago (low back pain).</td></tr>
+      <tr><td class="wp">muscul/o</td><td class="mean">muscle (Latin form)</td><td>Muscular, musculoskeletal. Latin equivalent of my/o (Greek).</td></tr>
+      <tr><td class="wp">patell/o</td><td class="mean">patella (kneecap)</td><td>Patellar; patellectomy; chondromalacia patellae = runner's knee.</td></tr>
+      <tr><td class="wp">sacr/o</td><td class="mean">sacrum</td><td>Sacral; sacroiliac (SI) joint; lumbosacral.</td></tr>
+      <tr><td class="wp">scapul/o</td><td class="mean">scapula (shoulder blade)</td><td>Scapular; subscapular (below scapula).</td></tr>
+      <tr><td class="wp">stern/o</td><td class="mean">sternum (breastbone)</td><td>Sternal; sternotomy (median incision for open heart surgery); sternocleidomastoid.</td></tr>
+      <tr><td class="wp">tibi/o</td><td class="mean">tibia (shin bone)</td><td>Tibial; tibial plateau fracture; tibiofemoral joint.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- CLINICAL TERMS -->
+<div class="sec" id="tab-clinical">
+  <div class="pg">Clinical terms organized by category. Chapter 3 has the largest clinical term count — covering congenital conditions, bone disease, arthropathies, spinal disorders, muscle disorders, trauma, and neoplasms.</div>
+
+  <div class="sec-hdr">Congenital conditions</div>
+  <div class="cl-grid">
+    <div class="cl-card"><div class="cl-term">Achondroplasia</div><div class="cl-break">a- + chondr/o + -plasia</div><div class="cl-def">Most common short-limb dwarfism. Without cartilage development. Arms/legs short; trunk normal. Autosomal dominant. Normal intelligence.</div></div>
+    <div class="cl-card"><div class="cl-term">Muscular dystrophy</div><div class="cl-break">muscul/o + dys- + -trophy</div><div class="cl-def">Progressive skeletal muscle wasting. Duchenne MD (DMD) = most common; X-linked; males; dystrophin protein absent.</div></div>
+    <div class="cl-card"><div class="cl-term">Polydactyly</div><div class="cl-break">poly- + dactyl/o + -y</div><div class="cl-def">Extra fingers or toes. poly- = many. Most common congenital hand anomaly.</div></div>
+    <div class="cl-card"><div class="cl-term">Syndactyly</div><div class="cl-break">syn- + dactyl/o + -y</div><div class="cl-def">Webbed or fused digits. syn- = together. Cutaneous (skin only) or osseous (bones fused).</div></div>
+    <div class="cl-card"><div class="cl-term">Spina bifida occulta</div><div class="cl-break">hidden vertebral arch defect</div><div class="cl-def">Hidden failure of vertebral arches to close. Usually asymptomatic. Occult = hidden. Worse forms: myelomeningocele.</div></div>
+    <div class="cl-card"><div class="cl-term">Talipes (clubfoot)</div><div class="cl-break">tal/o + pes (ankle + foot)</div><div class="cl-def">Foot turned inward and downward. Talipes equinovarus = most common. Treatment: serial casting (Ponseti method).</div></div>
+    <div class="cl-card"><div class="cl-term">Torticollis</div><div class="cl-break">twisted neck</div><div class="cl-def">Contracted neck muscles pulling head to one side. "Wry neck." Congenital or acquired. Treatment: stretching, botulinum toxin.</div></div>
+  </div>
+
+  <div class="sec-hdr">Bone diseases</div>
+  <div class="cl-grid">
+    <div class="cl-card"><div class="cl-term">Osteoporosis</div><div class="cl-break">oste/o + por/o + -osis</div><div class="cl-def">Porous bone — low bone density. Most common metabolic bone disease. DEXA T-score ≤ -2.5. Hip + vertebral fractures. Bisphosphonates.</div></div>
+    <div class="cl-card"><div class="cl-term">Osteopenia</div><div class="cl-break">oste/o + -penia</div><div class="cl-def">Low bone mass — T-score -1.0 to -2.5. Precursor to osteoporosis. Treat: calcium, vitamin D, weight-bearing exercise.</div></div>
+    <div class="cl-card"><div class="cl-term">Osteomalacia</div><div class="cl-break">oste/o + -malacia</div><div class="cl-def">Bone softening from vitamin D deficiency (adults). Rickets = same in children (bowing legs, growth plate effects).</div></div>
+    <div class="cl-card"><div class="cl-term">Osteomyelitis</div><div class="cl-break">oste/o + myel/o + -itis</div><div class="cl-def">Bone marrow infection (usually Staph aureus). Hematogenous or contiguous. IV antibiotics + surgical debridement.</div></div>
+    <div class="cl-card"><div class="cl-term">Osteitis deformans</div><div class="cl-break">oste/o + -itis</div><div class="cl-def">Paget disease of bone. Abnormally rapid remodeling → enlarged, deformed, weakened bones. Elevated alkaline phosphatase. Bisphosphonates.</div></div>
+    <div class="cl-card"><div class="cl-term">Chondromalacia</div><div class="cl-break">chondr/o + -malacia</div><div class="cl-def">Cartilage softening. Chondromalacia patellae = softening of kneecap underside → anterior knee pain. "Runner's knee."</div></div>
+  </div>
+
+  <div class="sec-hdr">Arthropathies (joint disorders)</div>
+  <div class="cl-grid">
+    <div class="cl-card"><div class="cl-term">Osteoarthritis (OA/DJD)</div><div class="cl-break">oste/o + arthr/o + -itis</div><div class="cl-def">Degenerative joint disease. Cartilage breakdown → bone-on-bone. Age-related, weight-bearing joints. Morning stiffness &lt;30 min. NSAIDs, arthroplasty.</div></div>
+    <div class="cl-card"><div class="cl-term">Rheumatoid arthritis (RA)</div><div class="cl-break">arthr/o + -itis (autoimmune)</div><div class="cl-def">Autoimmune synovial inflammation → symmetric small joint destruction. Morning stiffness &gt;1 hr. RF+, anti-CCP+. DMARDs first-line.</div></div>
+    <div class="cl-card"><div class="cl-term">Bursitis</div><div class="cl-break">burs/o + -itis</div><div class="cl-def">Bursa inflammation from repetitive use or trauma. Common: shoulder, hip, knee. Treatment: rest, ice, NSAIDs, corticosteroid injection.</div></div>
+    <div class="cl-card"><div class="cl-term">Tendinitis</div><div class="cl-break">tendin/o + -itis</div><div class="cl-def">Tendon inflammation from overuse. Achilles, rotator cuff, patellar. Treatment: rest, PT, eccentric exercises, corticosteroid injection.</div></div>
+    <div class="cl-card"><div class="cl-term">Carpal tunnel syndrome</div><div class="cl-break">median nerve compression</div><div class="cl-def">Median nerve compressed in carpal tunnel. Numbness/tingling thumb–middle fingers. Phalen test. Treatment: wrist splint, injection, surgery.</div></div>
+    <div class="cl-card"><div class="cl-term">Ankylosing spondylitis</div><div class="cl-break">ankyl/o + spondyl/o + -itis</div><div class="cl-def">Inflammatory spinal arthritis → bamboo spine. Young males, HLA-B27+. Sacroiliac joints first. TNF inhibitors.</div></div>
+    <div class="cl-card"><div class="cl-term">Spondylolisthesis</div><div class="cl-break">spondyl/o + -listhesis</div><div class="cl-def">Vertebra slips forward over one below. L4-L5 or L5-S1. Graded I-IV. Back pain + sciatica. PT, bracing, fusion for high grade.</div></div>
+    <div class="cl-card"><div class="cl-term">Gout</div><div class="cl-break">urate crystal deposition</div><div class="cl-def">Uric acid crystals in joints → intense pain/erythema. Great toe (podagra) classic. Colchicine/NSAIDs acute; allopurinol prophylaxis.</div></div>
+  </div>
+
+  <div class="sec-hdr">Spinal curvatures — mnemonic</div>
+  <div class="card-grid">
+    <div class="ccard"><div class="ctitle">Scoliosis — Sideways</div><div class="cdef">scoli/o + -osis = crooked. Lateral curve. S or C shape viewed from behind. Cobb ≥10°. Brace: 25-40°; Surgery: &gt;40-50°.</div></div>
+    <div class="ccard"><div class="ctitle">Kyphosis — hump/posterior</div><div class="cdef">kyph/o + -osis = hump. Excessive POSTERIOR thoracic curve. Hunchback. Scheuermann = structural. Kyphoplasty for compression fracture.</div></div>
+    <div class="ccard"><div class="ctitle">Lordosis — Lumbar/inward</div><div class="cdef">lord/o + -osis = bent backward. Excessive ANTERIOR lumbar curve. Swayback. Common in pregnancy. L in Lordosis = Lumbar.</div></div>
+  </div>
+
+  <div class="sec-hdr">Muscle disorders & trauma</div>
+  <div class="cl-grid">
+    <div class="cl-card"><div class="cl-term">Rhabdomyolysis</div><div class="cl-break">rhabdomy/o + -lysis</div><div class="cl-def">Skeletal muscle breakdown → myoglobin → dark "cola" urine → kidney injury. Crush injury, extreme exercise, statins. IV fluids treatment.</div></div>
+    <div class="cl-card"><div class="cl-term">Myasthenia gravis</div><div class="cl-break">my/o + astheni/o</div><div class="cl-def">Autoimmune ACh receptor attack → fatigable weakness. Worse with activity, better with rest. Ptosis/diplopia first. Pyridostigmine.</div></div>
+    <div class="cl-card"><div class="cl-term">Fibromyalgia</div><div class="cl-break">fibr/o + my/o + -algia</div><div class="cl-def">Widespread musculoskeletal pain + fatigue + tender points. No structural cause. Central sensitization. Exercise, duloxetine, pregabalin.</div></div>
+    <div class="cl-card"><div class="cl-term">Compartment syndrome</div><div class="cl-break">fascial pressure emergency</div><div class="cl-def">Increased pressure in fascial compartment → ischemia. EMERGENCY. 6 P's: pain, pressure, paresthesia, paralysis, pallor, pulselessness. Fasciotomy.</div></div>
+    <div class="cl-card"><div class="cl-term">Sprain vs Strain</div><div class="cl-break">ligament vs muscle/tendon</div><div class="cl-def">SPRAIN = ligament injury (bone-to-bone). STRAIN = muscle or tendon injury. Both graded I (mild) to III (complete tear).</div></div>
+    <div class="cl-card"><div class="cl-term">Dislocation / Subluxation</div><div class="cl-break">joint displacement</div><div class="cl-def">Dislocation = complete joint displacement. Subluxation = partial (sub- = partial). Both require reduction (realignment).</div></div>
+  </div>
+
+  <div class="sec-hdr">Fracture types</div>
+  <div class="cl-grid">
+    <div class="cl-card"><div class="cl-term">Closed / Open</div><div class="cl-break">skin intact vs penetrated</div><div class="cl-def">Closed (simple): skin intact. Open (compound): bone through skin → infection risk → IV antibiotics + urgent surgery.</div></div>
+    <div class="cl-card"><div class="cl-term">Comminuted</div><div class="cl-break">multiple fragments</div><div class="cl-def">Bone shattered into multiple fragments. High-energy trauma. Requires surgical fixation (ORIF or external fixation).</div></div>
+    <div class="cl-card"><div class="cl-term">Compression</div><div class="cl-break">vertebral crush</div><div class="cl-def">Vertebra collapses under axial load. Common in osteoporosis → kyphosis. Kyphoplasty/vertebroplasty + pain management.</div></div>
+    <div class="cl-card"><div class="cl-term">Colles fracture</div><div class="cl-break">distal radius, FOOSH</div><div class="cl-def">Distal radius + dorsal displacement = "dinner fork" deformity. Fall On OutStretched Hand. Common in osteoporotic women.</div></div>
+    <div class="cl-card"><div class="cl-term">Greenstick</div><div class="cl-break">children only</div><div class="cl-def">Incomplete fracture — one cortex bends, other breaks. Children only (flexible bones). Like bending a green stick.</div></div>
+    <div class="cl-card"><div class="cl-term">Salter-Harris</div><div class="cl-break">growth plate fracture</div><div class="cl-def">Types I-V involving growth plate. Type I = best prognosis (slipped through). Type V = worst (crushed). Mnemonic: SALTR.</div></div>
+  </div>
+</div>
+
+<!-- PROCEDURES -->
+<div class="sec" id="tab-procedures">
+  <div class="pg">Diagnostic and therapeutic procedures for the musculoskeletal system. The suffix identifies the type of procedure.</div>
+
+  <div class="sec-hdr">Diagnostic procedures</div>
+  <table class="dtable"><colgroup><col style="width:22%"><col style="width:78%"></colgroup>
+    <thead><tr><th>Term</th><th>Definition & notes</th></tr></thead>
+    <tbody>
+      <tr><td class="mean">Arthroscopy</td><td>arthr/o + -scopy = visual examination of joint interior via small incision. Both diagnostic and therapeutic (meniscus repair, ACL). Knee and shoulder most common. Arthroscope = the instrument.</td></tr>
+      <tr><td class="mean">Arthrography</td><td>arthr/o + -graphy = imaging of a joint using contrast agent injected into joint space + X-ray or CT. Detects ligament tears, cartilage damage, loose bodies. Largely replaced by MRI.</td></tr>
+      <tr><td class="mean">DEXA scan</td><td>Dual Energy X-ray Absorptiometry. Measures bone mineral density. T-score: ≥ -1.0 = normal; -1.0 to -2.5 = osteopenia; ≤ -2.5 = osteoporosis. Screening for women ≥65.</td></tr>
+      <tr><td class="mean">Electromyography (EMG)</td><td>electr/o + my/o + -graphy = recording electrical activity of muscles using needle electrodes. Diagnoses myopathy, neuropathy, myasthenia gravis. Often combined with nerve conduction study (NCS).</td></tr>
+      <tr><td class="mean">Myelogram</td><td>myel/o + -gram = imaging of spinal cord using contrast injected into subarachnoid space. Largely replaced by MRI. Still used when MRI contraindicated.</td></tr>
+      <tr><td class="mean">X-ray (Radiograph)</td><td>First-line imaging for fractures and arthritis. Shows bone cortex, joint spaces. AP and lateral views standard. Stress fractures may be initially invisible (MRI for diagnosis).</td></tr>
+      <tr><td class="mean">MRI</td><td>Magnetic resonance imaging. Gold standard for soft tissue: ligaments, tendons, cartilage, intervertebral discs, spinal cord, bone marrow. No radiation. Contraindicated with metallic implants.</td></tr>
+      <tr><td class="mean">Phalen test</td><td>Wrist hyperflexion held 60 seconds → reproduces carpal tunnel symptoms (numbness/tingling in median nerve distribution). Positive = CTS diagnosis. Compare: Tinel sign = tapping over carpal tunnel.</td></tr>
+      <tr><td class="mean">Goniometry</td><td>goni/o + -metry = measurement of joint angles using a goniometer (the instrument). Used by physical therapists to document ROM and progress in rehabilitation.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sec-hdr">Therapeutic interventions</div>
+  <table class="dtable"><colgroup><col style="width:22%"><col style="width:78%"></colgroup>
+    <thead><tr><th>Term</th><th>Definition & notes</th></tr></thead>
+    <tbody>
+      <tr><td class="mean">Arthrocentesis</td><td>arthr/o + -centesis = surgical aspiration of joint fluid. Diagnostic: crystal analysis (gout = urate; pseudogout = CPPD), culture/sensitivity, WBC count. Therapeutic: drain excess fluid, inject corticosteroid or viscosupplementation.</td></tr>
+      <tr><td class="mean">Arthrodesis</td><td>arthr/o + -desis = surgical fusion — permanently eliminates movement. For severely damaged arthritic joints. Common: spinal fusion (spondylosyndesis), ankle arthrodesis. Compare: arthroplasty = replaces joint.</td></tr>
+      <tr><td class="mean">Arthroplasty (THR/TKR)</td><td>arthr/o + -plasty = surgical repair/reconstruction of a joint. Total Hip Replacement (THR) and Total Knee Replacement (TKR) = most common elective orthopedic surgeries. Metal/plastic/ceramic prosthesis (prosthes/o).</td></tr>
+      <tr><td class="mean">Laminectomy</td><td>lamin/o + -ectomy = surgical removal of vertebral lamina. Decompresses spinal canal for herniated disc or spinal stenosis. Laminotomy = smaller partial removal. Postlaminectomy syndrome = failed back surgery syndrome.</td></tr>
+      <tr><td class="mean">Kyphoplasty</td><td>kyph/o + -plasty = minimally invasive: balloon inflated to restore vertebral height → bone cement (PMMA) injected. For osteoporotic vertebral compression fractures. Vertebroplasty = same without balloon.</td></tr>
+      <tr><td class="mean">Spondylosyndesis</td><td>spondyl/o + syn- + -desis = spinal fusion — surgically binding vertebrae together. Uses bone graft, cages, rods, screws. For: instability, herniated disc, spondylolisthesis, deformity. Also called spondylodesis or spinal fusion.</td></tr>
+      <tr><td class="mean">Osteoclasis</td><td>oste/o + -clasis = intentional breaking of a bone to correct deformity (malunion), then reset correctly. ⚠ Not the same as osteoclast (the bone-resorbing cell).</td></tr>
+      <tr><td class="mean">Fasciotomy</td><td>fasci/o + -tomy = incision into fascia to release compartment pressure. Emergency treatment for acute compartment syndrome. Wound left open to close later.</td></tr>
+      <tr><td class="mean">Fracture fixation</td><td>Internal = ORIF (open reduction internal fixation) — plates, screws, rods, intramedullary nails. External = frame with pins through skin into bone. Closed reduction = manual realignment without surgery.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sec-hdr">Pharmacology</div>
+  <div class="card-grid">
+    <div class="ccard"><span class="cwt" style="background:var(--bg-danger);color:var(--text-danger)">Analgesics</span><div class="cdef">Pain relief: NSAIDs (ibuprofen, naproxen — anti-inflammatory + analgesic), acetaminophen (analgesic only), opioids (severe acute pain).</div></div>
+    <div class="ccard"><span class="cwt" style="background:var(--bg-warning);color:var(--text-warning)">DMARDs</span><div class="cdef">Disease-Modifying AntiRheumatic Drugs: methotrexate (first-line RA), hydroxychloroquine. Biologic DMARDs: adalimumab, etanercept (TNF inhibitors). Slow RA progression.</div></div>
+    <div class="ccard"><span class="cwt" style="background:var(--bg-success);color:var(--text-success)">Bisphosphonates</span><div class="cdef">Inhibit osteoclast activity → prevent bone resorption → increase bone density. For osteoporosis + Paget disease. Examples: alendronate (Fosamax), risedronate, zoledronic acid (IV).</div></div>
+    <div class="ccard"><span class="cwt" style="background:var(--bg-muted);color:var(--text-secondary)">Muscle relaxants</span><div class="cdef">Reduce muscle spasm: cyclobenzaprine (Flexeril), baclofen, methocarbamol. For acute back pain and strain. CNS depressants — may cause drowsiness.</div></div>
+  </div>
+</div>
+
+<!-- FLASHCARDS -->
+<div class="sec" id="tab-flashcards">
+  <div class="fc-controls">
+    <select class="fc-sel" id="fc-cat" onchange="initFC()">
+      <option value="all">All categories</option>
+      <option value="prefix">Prefixes</option>
+      <option value="suffix">Suffixes</option>
+      <option value="combining">Combining forms</option>
+      <option value="clinical">Clinical terms</option>
+      <option value="ap">A&P terms</option>
+    </select>
+    <button class="btn" onclick="shuffleFC()">Shuffle</button>
+    <span class="fc-prog" id="fc-prog">—</span>
+  </div>
+  <div class="flashcard" id="flashcard" onclick="flipFC()">
+    <span class="fc-badge" id="fc-badge"></span>
+    <div class="fc-front" id="fc-front"></div>
+    <div class="fc-back" id="fc-back"><div class="meaning" id="fc-meaning"></div><div class="example" id="fc-example"></div></div>
+    <div class="fc-hint" id="fc-hint">click to reveal</div>
+  </div>
+  <div class="fc-actions">
+    <button class="btn btn-no" onclick="markFC(false)">✗ Still learning</button>
+    <button class="btn btn-ok" onclick="markFC(true)">✓ Got it</button>
+    <button class="btn" onclick="prevFC()">← Prev</button>
+    <button class="btn" onclick="nextFC()">Next →</button>
+  </div>
+  <div class="fc-score" id="fc-score"></div>
+</div>
+
+<!-- QUIZ -->
+<div class="sec" id="tab-quiz">
+  <div id="quiz-wrap">
+    <div class="quiz-q" id="quiz-q"></div>
+    <div class="quiz-opts" id="quiz-opts"></div>
+    <div class="qfb" id="quiz-fb"></div>
+    <button class="btn" id="quiz-next" onclick="nextQ()" style="display:none">Next →</button>
+    <div class="qctr" id="quiz-ctr"></div>
+  </div>
+  <div id="quiz-done" style="display:none">
+    <div class="score-wrap">
+      <div class="score-num" id="quiz-final"></div>
+      <div class="score-lbl">correct answers</div>
+      <div style="display:flex;gap:8px;justify-content:center;margin-top:1rem">
+        <button class="btn" onclick="startQuiz()">Try again</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div></div>
+
+<script>
+const TM={prefix:{label:"Prefix",bg:"#fff8e1",c:"#854F0B"},suffix:{label:"Suffix",bg:"#e6f4ea",c:"#1b5e20"},combining:{label:"Combining",bg:"#e8f0fc",c:"#1a5c9c"},clinical:{label:"Clinical",bg:"#fce8e8",c:"#9c2020"},ap:{label:"A&P",bg:"#f7f7f7",c:"#555555"}};
+const DATA=[
+  {term:"dia-",type:"prefix",meaning:"through, complete, between",extra:"diaphysis (shaft of long bone), diaphragm (partition through body)"},
+  {term:"dys-",type:"prefix",meaning:"painful, difficult, abnormal",extra:"dystrophy (abnormal development), muscular dystrophy. Universal prefix."},
+  {term:"endo-, end-",type:"prefix",meaning:"within, inner",extra:"endosteum (membrane within bone). end- before vowels."},
+  {term:"epi-",type:"prefix",meaning:"above, upon, on",extra:"epiphysis (end of long bone), epicondyle (above condyle)"},
+  {term:"inter-",type:"prefix",meaning:"between",extra:"intervertebral (between vertebrae = disc space), intercostal (between ribs)"},
+  {term:"peri-",type:"prefix",meaning:"around, surrounding",extra:"periosteum (around bone outer surface), perimysium (around muscle fascicle)"},
+  {term:"syn-",type:"prefix",meaning:"joined, together, with",extra:"syndactyly (fused digits), synergistic muscles (work together), symphysis"},
+  {term:"-al",type:"suffix",meaning:"pertaining to",extra:"vertebral, costal (ribs), intervertebral, plantar (sole)"},
+  {term:"-centesis",type:"suffix",meaning:"surgical puncture to withdraw fluid",extra:"arthrocentesis (joint aspiration for diagnosis or therapy)"},
+  {term:"-clasis",type:"suffix",meaning:"intentional breaking (therapeutic)",extra:"osteoclasis (intentional bone breaking to correct deformity). ⚠ ≠ osteoclast (cell)."},
+  {term:"-desis",type:"suffix",meaning:"surgical binding, fusion",extra:"arthrodesis (joint fusion), spondylosyndesis (spinal fusion). Permanent immobilization."},
+  {term:"-graphy",type:"suffix",meaning:"process of recording/imaging",extra:"arthrography (joint imaging), electromyography (EMG = muscle electrical recording)"},
+  {term:"-itis",type:"suffix",meaning:"inflammation",extra:"arthritis, osteomyelitis, bursitis, tendinitis, costochondritis"},
+  {term:"-listhesis",type:"suffix",meaning:"slipping",extra:"spondylolisthesis (vertebra slips forward). EXCLUSIVE to spinal terms. Greek olisthos = to slip."},
+  {term:"-lysis",type:"suffix",meaning:"breakdown, destruction, loosening",extra:"rhabdomyolysis (skeletal muscle breakdown → myoglobin → kidney injury)"},
+  {term:"-malacia",type:"suffix",meaning:"softening",extra:"osteomalacia (bone softening), chondromalacia (cartilage softening). ⚠ ≠ -megaly."},
+  {term:"-physis",type:"suffix",meaning:"growth, growing",extra:"diaphysis (shaft), epiphysis (end), metaphysis, symphysis (grown together)"},
+  {term:"-plasty",type:"suffix",meaning:"surgical repair/reconstruction",extra:"arthroplasty (joint replacement), osteoplasty, kyphoplasty"},
+  {term:"-scopy",type:"suffix",meaning:"process of visual examination",extra:"arthroscopy (visual exam of joint interior). Arthroscope = the instrument."},
+  {term:"-trophy",type:"suffix",meaning:"nourishment, development",extra:"dystrophy (abnormal), atrophy (wasting), hypertrophy (excessive = muscle building)"},
+  {term:"arthr/o",type:"combining",meaning:"joint, articulation",extra:"arthritis, arthroplasty, arthroscopy, arthrodesis, arthrocentesis"},
+  {term:"burs/o",type:"combining",meaning:"bursa (fluid sac near joint)",extra:"bursitis (inflammation), bursectomy"},
+  {term:"chondr/o",type:"combining",meaning:"cartilage",extra:"chondromalacia, achondroplasia (dwarfism), costochondritis, chondrosarcoma"},
+  {term:"cost/o",type:"combining",meaning:"rib",extra:"costal, intercostal (between ribs), costochondritis"},
+  {term:"dactyl/o",type:"combining",meaning:"finger, toe, digit",extra:"polydactyly (extra digits), syndactyly (fused digits)"},
+  {term:"electr/o",type:"combining",meaning:"electricity",extra:"electromyography (EMG = recording muscle electrical activity)"},
+  {term:"fasci/o",type:"combining",meaning:"fascia (connective tissue sheet)",extra:"plantar fasciitis, fasciotomy (compartment syndrome release)"},
+  {term:"my/o",type:"combining",meaning:"muscle",extra:"myalgia (pain), myopathy (disease), EMG, rhabdomyolysis. Primary muscle CF."},
+  {term:"myel/o",type:"combining",meaning:"⚠ DUAL: bone marrow OR spinal cord",extra:"Osteomyelitis (bone MARROW) vs myelogram (SPINAL CORD). Context essential!"},
+  {term:"oste/o",type:"combining",meaning:"bone",extra:"osteoporosis, osteomalacia, osteomyelitis, osteosarcoma. Primary bone CF."},
+  {term:"plant/o",type:"combining",meaning:"sole of the foot",extra:"plantar fasciitis, plantar flexion (pointing foot toward sole)"},
+  {term:"prosthes/o",type:"combining",meaning:"prosthesis, artificial addition",extra:"prosthesis (artificial replacement — limb, joint). Total hip/knee replacement."},
+  {term:"rhabdomy/o",type:"combining",meaning:"skeletal (striated) muscle",extra:"rhabdomyolysis (breakdown → myoglobin → kidney injury), rhabdomyosarcoma"},
+  {term:"spondyl/o",type:"combining",meaning:"vertebra, spinal column",extra:"spondylolisthesis, ankylosing spondylitis, spondylosyndesis. Primarily pathology terms."},
+  {term:"syndesm/o",type:"combining",meaning:"ligament",extra:"syndesmosis, syndesmoplasty. syn- = together + desm/o = band/ligament."},
+  {term:"tendin/o",type:"combining",meaning:"tendon",extra:"tendinitis, tendinopathy. Also tend/o, ten/o. Tendon = muscle to bone."},
+  {term:"vertebr/o",type:"combining",meaning:"vertebra, spinal column",extra:"vertebral, intervertebral (disc space). Primarily anatomical terms. vs spondyl/o."},
+  {term:"Osteoporosis",type:"clinical",meaning:"oste/o + por/o + -osis = porous bone from low bone density. Most common metabolic bone disease.",extra:"DEXA T-score ≤ -2.5. Hip/vertebral fractures. Bisphosphonates, calcium, vitamin D."},
+  {term:"Osteomalacia",type:"clinical",meaning:"oste/o + -malacia = bone softening from vitamin D deficiency in adults",extra:"Rickets = same condition in children (growth plates affected → bowing legs)."},
+  {term:"Osteomyelitis",type:"clinical",meaning:"oste/o + myel/o + -itis = bone marrow infection (usually Staph aureus)",extra:"IV antibiotics + surgical debridement if needed."},
+  {term:"Osteoarthritis (OA)",type:"clinical",meaning:"Degenerative joint disease — cartilage breakdown → bone-on-bone pain. Age-related.",extra:"Morning stiffness <30 min. X-ray: osteophytes, joint space narrowing."},
+  {term:"Rheumatoid arthritis (RA)",type:"clinical",meaning:"Autoimmune synovial inflammation → symmetric small joint destruction",extra:"Morning stiffness >1 hr. RF+, anti-CCP+. DMARDs (methotrexate first-line)."},
+  {term:"Spondylolisthesis",type:"clinical",meaning:"spondyl/o + -listhesis = forward slipping of a vertebra over the one below",extra:"L4-L5 or L5-S1. Graded I-IV. Back pain + sciatica."},
+  {term:"Scoliosis",type:"clinical",meaning:"Lateral sideways spinal curvature ≥10° (scoli/o = crooked)",extra:"Brace for Cobb 25-40°; surgery for >40-50°."},
+  {term:"Kyphosis",type:"clinical",meaning:"Excessive posterior thoracic curvature — hunchback (kyph/o = hump)",extra:"Scheuermann = structural. Kyphoplasty for compression fractures."},
+  {term:"Lordosis",type:"clinical",meaning:"Excessive anterior lumbar curvature — swayback (lord/o = bent backward)",extra:"L in Lordosis = Lumbar. Common in pregnancy."},
+  {term:"Rhabdomyolysis",type:"clinical",meaning:"rhabdomy/o + -lysis = skeletal muscle breakdown → myoglobin → kidney injury",extra:"Dark 'cola' urine. Crush injury, extreme exercise, statins. IV fluids."},
+  {term:"Arthrocentesis",type:"clinical",meaning:"arthr/o + -centesis = surgical aspiration of joint fluid",extra:"Diagnostic (crystals, culture) or therapeutic (drain, inject steroid)."},
+  {term:"Arthrodesis",type:"clinical",meaning:"arthr/o + -desis = surgical joint fusion (permanent immobilization)",extra:"Compare arthroplasty (-plasty = replace/repair joint)."},
+  {term:"Laminectomy",type:"clinical",meaning:"lamin/o + -ectomy = removal of vertebral lamina to decompress spinal canal",extra:"For herniated disc or spinal stenosis. Postlaminectomy syndrome = failed back surgery."},
+  {term:"Appendicular skeleton",type:"ap",meaning:"Bones forming the free appendages and girdles — limbs and their attachments",extra:"126 bones: upper extremities + shoulder girdle; lower extremities + pelvic girdle."},
+  {term:"Axial skeleton",type:"ap",meaning:"Bones forming the vertical axis: skull + vertebral column + rib cage",extra:"80 bones. Protects brain, spinal cord, heart, lungs."},
+  {term:"Bursa",type:"ap",meaning:"Fluid-filled sac near a joint reducing friction (burs/o). Bursitis = inflammation.",extra:"Common sites: shoulder, hip, knee."},
+  {term:"Diaphysis",type:"ap",meaning:"The shaft of a long bone (dia- + -physis = growing through)",extra:"Contains medullary cavity with yellow marrow in adults."},
+  {term:"Epiphysis",type:"ap",meaning:"The rounded end of a long bone (epi- + -physis = growing upon)",extra:"Epiphyseal plate = growth plate. Closes end of puberty."},
+  {term:"Periosteum",type:"ap",meaning:"Dense fibrous membrane covering OUTER surface of bone (peri- + oste/o)",extra:"Contains blood vessels and osteoblasts for bone repair after fracture."},
+  {term:"Hematopoiesis",type:"ap",meaning:"hemat/o + -poiesis = formation of blood cells in red bone marrow (myel/o)",extra:"RBCs, WBCs, and platelets. Primarily in flat bones and proximal long bones."},
+];
+let fcCards=[],fcIdx=0,fcFlipped=false,fcGot=new Set(),fcNope=new Set();
+let quizQs=[],quizIdx=0,quizScore=0,quizAnswered=false;
+function showTab(id,btn){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+  if(id==='flashcards'&&fcCards.length===0)initFC();
+  if(id==='quiz')startQuiz();
+}
+function initFC(){
+  const cat=document.getElementById('fc-cat').value;
+  fcCards=cat==='all'?[...DATA]:DATA.filter(d=>d.type===cat);
+  fcCards.sort(()=>Math.random()-0.5);
+  fcIdx=0;fcFlipped=false;fcGot=new Set();fcNope=new Set();showCard();
+}
+function showCard(){
+  if(!fcCards.length)return;
+  const c=fcCards[fcIdx],m=TM[c.type];
+  const b=document.getElementById('fc-badge');
+  b.textContent=m.label;b.style.background=m.bg;b.style.color=m.c;
+  document.getElementById('fc-front').textContent=c.term;
+  document.getElementById('fc-meaning').textContent=c.meaning;
+  document.getElementById('fc-example').textContent=c.extra?'Note: '+c.extra:'';
+  document.getElementById('fc-front').style.display='block';
+  document.getElementById('fc-back').style.display='none';
+  document.getElementById('fc-hint').style.display='block';
+  fcFlipped=false;
+  document.getElementById('fc-prog').textContent='Card '+(fcIdx+1)+' of '+fcCards.length;
+  updScore();
+}
+function flipFC(){if(fcFlipped)return;fcFlipped=true;document.getElementById('fc-front').style.display='none';document.getElementById('fc-back').style.display='block';document.getElementById('fc-hint').style.display='none';}
+function markFC(ok){if(ok)fcGot.add(fcIdx);else fcNope.add(fcIdx);nextFC();}
+function nextFC(){fcIdx=(fcIdx+1)%fcCards.length;showCard();}
+function prevFC(){fcIdx=(fcIdx-1+fcCards.length)%fcCards.length;showCard();}
+function shuffleFC(){fcCards.sort(()=>Math.random()-0.5);fcIdx=0;showCard();}
+function updScore(){document.getElementById('fc-score').innerHTML='<span style="color:#1b5e20">✓ '+fcGot.size+' got it</span> &nbsp; <span style="color:#9c2020">✗ '+fcNope.size+' still learning</span> &nbsp; <span style="color:#888">'+(fcCards.length-fcGot.size-fcNope.size)+' unseen</span>';}
+function shuffle(a){return[...a].sort(()=>Math.random()-0.5);}
+function startQuiz(){
+  document.getElementById('quiz-wrap').style.display='block';
+  document.getElementById('quiz-done').style.display='none';
+  quizQs=shuffle(DATA).slice(0,15);quizIdx=0;quizScore=0;quizAnswered=false;showQ();
+}
+function showQ(){
+  if(quizIdx>=quizQs.length){endQuiz();return;}
+  const q=quizQs[quizIdx];
+  document.getElementById('quiz-q').textContent='What does "'+q.term+'" mean?';
+  document.getElementById('quiz-fb').textContent='';
+  document.getElementById('quiz-next').style.display='none';
+  document.getElementById('quiz-ctr').textContent='Question '+(quizIdx+1)+' of '+quizQs.length;
+  const wrong=shuffle(DATA.filter(d=>d.term!==q.term)).slice(0,3).map(d=>d.meaning);
+  const opts=shuffle([q.meaning,...wrong]);
+  document.getElementById('quiz-opts').innerHTML=opts.map(function(o){return'<button class="qopt" onclick="checkA(this,\''+o.replace(/\\/g,'\\\\').replace(/'/g,"\\'")+'\')">'+o+'</button>';}).join('');
+  quizAnswered=false;
+  document.getElementById('quiz-opts')._correct=q.meaning;
+}
+function checkA(btn,chosen){
+  if(quizAnswered)return;quizAnswered=true;
+  const correct=document.getElementById('quiz-opts')._correct;
+  document.querySelectorAll('.qopt').forEach(function(o){o.disabled=true;if(o.textContent.trim()===correct.trim())o.classList.add('correct');});
+  const fb=document.getElementById('quiz-fb');
+  if(chosen.trim()===correct.trim()){quizScore++;fb.textContent='✓ Correct!';fb.style.color='#1b5e20';}
+  else{btn.classList.add('wrong');fb.textContent='✗ Correct: '+correct;fb.style.color='#9c2020';}
+  document.getElementById('quiz-next').style.display='inline-block';
+}
+function nextQ(){quizIdx++;showQ();}
+function endQuiz(){document.getElementById('quiz-wrap').style.display='none';document.getElementById('quiz-done').style.display='block';document.getElementById('quiz-final').textContent=quizScore+' / '+quizQs.length;}
+window.onload=function(){document.getElementById('quiz-wrap').style.display='block';}
+</script>
+</body>
+</html>
